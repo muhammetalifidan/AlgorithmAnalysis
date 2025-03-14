@@ -1,6 +1,6 @@
 ﻿using ConsoleApp;
 
-public class InsertionSort : ISortingAlgorithm
+public class InsertionSort : ISortStrategy
 {
     public List<int> Sort(List<int> numbers)
     {

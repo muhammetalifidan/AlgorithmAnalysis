@@ -1,10 +1,10 @@
 ﻿namespace ConsoleApp;
 
-public class SortingContext
+public class SortContext
 {
-    private ISortingAlgorithm _sortingAlgorithm;
+    private ISortStrategy _sortingAlgorithm;
 
-    public SortingContext(ISortingAlgorithm sortingAlgorithm)
+    public SortContext(ISortStrategy sortingAlgorithm)
     {
         _sortingAlgorithm = sortingAlgorithm;
     }

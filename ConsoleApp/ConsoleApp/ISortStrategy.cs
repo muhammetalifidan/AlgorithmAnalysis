@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp;
 
-public interface ISortingAlgorithm
+public interface ISortStrategy
 {
     List<int> Sort(List<int> numbers);
 }

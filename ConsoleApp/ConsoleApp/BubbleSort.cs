@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp;
 
-public class BubbleSort: ISortingAlgorithm
+public class BubbleSort: ISortStrategy
 {
     public List<int> Sort(List<int> numbers)
     {
