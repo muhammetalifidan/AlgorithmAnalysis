@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ConsoleApp;
 
-namespace ConsoleApp
+public interface ISortingAlgorithm
 {
-    public interface ISortingAlgorithm
-    {
-        List<int> Sort(List<int> numbers);
-    }
+    List<int> Sort(List<int> numbers);
 }
