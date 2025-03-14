@@ -20,4 +20,13 @@ public class DisplayService
         Console.WriteLine($"Result: {result}");
         Console.WriteLine();
     }
+
+    public void DisplayMaxSubarrayResults(string algorithmName, int[] nums, int result)
+    {
+        Console.WriteLine($"----------- Maximum subarray with {algorithmName} algorithm -----------\n");
+        string numsList = string.Join(", ", nums);
+        Console.WriteLine($"Numbers: {numsList}");
+        Console.WriteLine($"Maximum subarray sum: {result}");
+        Console.WriteLine();
+    }
 }

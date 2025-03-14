@@ -22,9 +22,28 @@ displayService.DisplaySortingResults(algorithmName, numbersBeforeInsertionSort, 
 var iterativePower = new IterativePower();
 var powerContext = new PowerContext(iterativePower);
 int number = -3, exponent = 5;
-int result = powerContext.CalculateIntegerPower(number, exponent);
-displayService.DisplayPowerResults(number, exponent, result);
+int powerResult = powerContext.CalculateIntegerPower(number, exponent);
+displayService.DisplayPowerResults(number, exponent, powerResult);
 
-/* Maximum Subarray */
+/* Maximum Subarray Kadane*/
+var nums = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
 
-/* Maximum Subarray Sum */
+var maxSubarrayKadane = new MaxSubarrayKadane();
+var maxSubarrayContext = new MaxSubarrayContext(maxSubarrayKadane);
+var maxSubarrayResult = maxSubarrayContext.FindMaxSubarray(nums);
+
+string method1 = "MaxSubArrayDivideConquer";
+string divideConquer = method1.Substring(11);
+string divideConquerSpaced = string.Concat(divideConquer.Select(x => char.IsUpper(x) ? " " + x : x.ToString())).TrimStart();
+displayService.DisplayMaxSubarrayResults(divideConquerSpaced, nums, maxSubarrayResult);
+
+/* Maximum Subarray Divide Conquer */
+nums = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+
+var maxSubarrayDivideConquer = new MaxSubarrayDivideConquer();
+maxSubarrayContext = new MaxSubarrayContext(maxSubarrayDivideConquer);
+maxSubarrayResult = maxSubarrayContext.FindMaxSubarray(nums);
+
+string method2 = "MaxSubArrayKanade";
+string kanade = method2.Substring(11);
+displayService.DisplayMaxSubarrayResults(kanade, nums, maxSubarrayResult);
